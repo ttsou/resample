@@ -1,3 +1,3 @@
 ACLOCAL_AMFLAGS = -I m4
 AUTOMAKE_OPTIONS = foreign dist-bzip2
-SUBDIRS = src
+SUBDIRS = src tests

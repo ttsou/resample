@@ -21,6 +21,49 @@ $ make
 $ make install
 ```
 
+Test
+====
+```
+$ make check
+.
+.
+.
+Test Case 2348
+==============
+  Tone Frequency:    25000
+  Sample type:       s8
+  Ratio:             7/4
+  Error (RMSE):      0.000753242
+  Result:            Pass
+
+Test Case 2349
+==============
+  Tone Frequency:    25000
+  Sample type:       s8
+  Ratio:             7/5
+  Error (RMSE):      0.000509655
+  Result:            Pass
+
+Test Case 2350
+==============
+  Tone Frequency:    25000
+  Sample type:       s8
+  Ratio:             7/6
+  Error (RMSE):      0.000270038
+  Result:            Pass
+
+Test Case 2351
+==============
+  Tone Frequency:    25000
+  Sample type:       s8
+  Ratio:             7/7
+  Error (RMSE):      0
+  Result:            Pass
+
+Completed 2352 tests: 2352 passed and 0 failed
+PASS: resample_test
+```
+
 Run
 ===
 ```

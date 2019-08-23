@@ -16,4 +16,5 @@ AC_CHECK_LIB([m],[sincos])
 
 AC_OUTPUT(
 	src/Makefile
+	tests/Makefile
 	Makefile)
