@@ -92,9 +92,10 @@ RealResampler<T>::RealResampler(unsigned P, unsigned Q, unsigned taps)
 }
 
 #define COPY_INPUT(T) \
-    if (input.size() % Q || output.size() % P || \
-        input.size() / Q != output.size() / P || input.size() < history.size()) \
+    if (input.size() % Q || output.size() % P || input.size() / Q != output.size() / P) \
         throw invalid_argument("Invalid vector size(s)"); \
+    if (input.size() < history.size()) \
+        throw invalid_argument("Input size is less than the minimum supported size"); \
     if (output.size() > paths.size()) resize(output.size()); \
     vector<T> x(input.size() + history.size()); \
     copy(history.begin(), history.end(), x.begin()); \
