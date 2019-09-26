@@ -1,5 +1,5 @@
 AC_INIT([resample], [0.1], [tom@tsou.cc])
-AC_CONFIG_SRCDIR([src/Resampler.cpp])
+AC_CONFIG_SRCDIR([src/lib/Resampler.cpp])
 AM_INIT_AUTOMAKE([foreign dist-bzip2 no-define 1.6])
 
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
@@ -15,6 +15,7 @@ AC_CONFIG_MACRO_DIR([m4])
 AC_CHECK_LIB([m],[sincos])
 
 AC_OUTPUT(
+	src/lib/Makefile
 	src/Makefile
 	tests/Makefile
 	Makefile)
